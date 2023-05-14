@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import ClosePage from './Component/ClosePage/ClosePage';
+import DonatePoup from './Component/DonatePoup/DonatePoup';
 
 function App() {
+  let [isVisiblePoup,setIsVisiblePoup]=useState(true)
+  function closePoup(){
+    setIsVisiblePoup(false)
+  }
+  function closeWithSend(value,name){
+    if((name.length>0)){
+      setIsVisiblePoup(false)
+      console.log(value)
+    }else{
+      alert('Немає імені')
+    }
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ClosePage closePoup={closePoup}/>
+      <DonatePoup closeWithSend={closeWithSend} isVisiblePoup={isVisiblePoup} closePoup={closePoup}/>
     </div>
   );
 }

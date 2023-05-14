@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Sigmar&display=swap');
+.DonatePoup{
+    width: 50%;
+    height: 80vh;
+    position: fixed;
+    top: 10vh;
+    left: 25%;
+    background-color: white;
+    border: 1px solid black;
+    padding: 20;
+    border-radius: 10px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Abril Fatface', cursive;
+    outline: none;
+}
+.closeBtn{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.DonatePoup__text{
+    font-size: 40px;
+    font-family: 'Sigmar', cursive;
+}
+
+.DonatePoup__money__added{
+font-size: 28px;
+}
+.DonatePoup__money__added__amount{
+    font-weight: 700;
+    color: rgb(41, 98, 255);
+}
+.DonatePoup__money__input{
+    width: 80%;
+    height: 40px;
+    font-size: 32px;
+    text-align: center;
+}
+.DonatePoup__btns{
+    min-width: 60%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.DonatePoup__btns__btn{
+   padding: 10px 25px;
+   margin: 0 30px;
+   border: 1px solid black;
+   border-radius: 5px;
+   cursor: pointer;
+   background-color: rgb(104, 104, 248);
+   color: white;
+}
+.DonatePoup__inputs{
+    width: 80%;
+    flex-wrap: wrap;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.DonatePoup__inputs__btn{
+    width: 200px;
+    height: 40px;
+    font-size: 32px;
+    background-color: rgb(241, 241, 133);
+    margin: 20px 0;
+   
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+.DonatePoup__inputs__input{
+    width: 300px;
+    font-size: 40px;
+    height: 50px;
+    cursor: text;
+
+}
+input{
+    outline: none;
+}
+.DonatePoup__money__added__amount{
+    font-size: 40px;
+}
+@media screen and (max-width:750px){
+    .DonatePoup{
+        width: 90%;
+        left: 5%;
+    }
+}
+@media screen and (max-width:450px){
+   .DonatePoup__text{
+    font-size: 24px
+   }
+   .DonatePoup__money__input{
+    font-size: 16px;
+   }
+   .DonatePoup__money__added{
+    font-size: 16px
+   }
+   .DonatePoup__money__added__amount{
+    font-size: 24px;
+}
+.DonatePoup__btns__btn{
+    margin: 0 5px;
+    font-size: 16px;
+    padding: 10px;
+}
+.DonatePoup__inputs__btn{
+    width: 100% !important;
+    font-size: 16px;
+}
+}
