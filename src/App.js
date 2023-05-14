@@ -6,21 +6,26 @@ import DonatePoup from './Component/DonatePoup/DonatePoup';
 
 function App() {
   let [isVisiblePoup,setIsVisiblePoup]=useState(true)
+  let [moneyDonnated,setmoneyDonnated]=useState(localStorage.getItem('moneyDonnated__LS') || 0)
   function closePoup(){
     setIsVisiblePoup(false)
   }
   function closeWithSend(value,name){
     if((name.length>0)){
       setIsVisiblePoup(false)
-      console.log(value)
+      console.log(value,moneyDonnated)
+      localStorage.setItem('moneyDonnated__LS',value+=Number(moneyDonnated))
+      setmoneyDonnated(value+Number(moneyDonnated))
+  
+      alert('Thank you')
     }else{
-      alert('Немає імені')
+      alert('No name')
     }
   }
   return (
     <div className="App">
       <ClosePage closePoup={closePoup}/>
-      <DonatePoup closeWithSend={closeWithSend} isVisiblePoup={isVisiblePoup} closePoup={closePoup}/>
+      <DonatePoup moneyDonnated={moneyDonnated} closeWithSend={closeWithSend} isVisiblePoup={isVisiblePoup} closePoup={closePoup}/>
     </div>
   );
 }

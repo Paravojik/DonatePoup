@@ -79,6 +79,9 @@ font-size: 28px;
     border: 1px solid black;
     text-align: center;
     cursor: pointer;
+    display: flex;
+    justify-content:center;
+    align-items: center;
 }
 .DonatePoup__inputs__input{
     width: 300px;
@@ -92,6 +95,11 @@ input{
 }
 .DonatePoup__money__added__amount{
     font-size: 40px;
+}
+.DonatePoup__inputs__btn__img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }
 @media screen and (max-width:750px){
     .DonatePoup{
