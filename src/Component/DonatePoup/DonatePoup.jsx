@@ -8,7 +8,7 @@ function DonatePoup(props){
   
   
     return(
-        <div className='DonatePoup' style={(props.isVisiblePoup) ? {display:'flex'}:{display:'none'}}>
+        <div className='DonatePoup' style={(props.isVisiblePoup) ? {opacity:'1'}:{opacity:'0'}}>
         <img className='closeBtn' src={close} alt="" onClick={props.closePoup} />
         <div className="DonatePoup__text">
             Please Donate

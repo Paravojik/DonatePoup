@@ -16,6 +16,7 @@
     align-items: center;
     font-family: 'Abril Fatface', cursive;
     outline: none;
+    transition: 0.5s;
 }
 .closeBtn{
     width: 40px;

@@ -14,8 +14,8 @@ function App() {
     if((name.length>0)){
       setIsVisiblePoup(false)
       console.log(value,moneyDonnated)
-      localStorage.setItem('moneyDonnated__LS',value+=Number(moneyDonnated))
-      setmoneyDonnated(value+Number(moneyDonnated))
+      localStorage.setItem('moneyDonnated__LS',Number(value)+Number(moneyDonnated))
+      setmoneyDonnated(Number(value)+Number(moneyDonnated))
   
       alert('Thank you')
     }else{
