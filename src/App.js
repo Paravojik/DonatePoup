@@ -24,7 +24,7 @@ function App() {
   }
   return (
     <div className="App">
-      <ClosePage closePoup={closePoup}/>
+      <ClosePage isVisiblePoup={isVisiblePoup} closePoup={closePoup}/>
       <DonatePoup moneyDonnated={moneyDonnated} closeWithSend={closeWithSend} isVisiblePoup={isVisiblePoup} closePoup={closePoup}/>
     </div>
   );
